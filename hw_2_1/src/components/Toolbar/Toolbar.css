@@ -1,28 +1,39 @@
-.main {
-    margin: 0 300px;
+/* ---------- button ---------- */
+.toolbar { margin-bottom: 20px; }
+
+button {
+    margin-right: 5px;
+    padding: 7px 16px;
+    font-size: 17px;
+    word-spacing: -3px;
+    color: #555555;
+    background-color: #fff;
+    border: 1px solid #555;
 }
 
-.menu {
-    display: flex;
+button:hover {
+    color: #fff;
+    background-color: #3E3E3E;
 }
 
-.menu__item {
-    border: 1px solid black;
-    padding: 10px;
-    margin: 5px;
-    cursor: pointer;
+.active {
+    color: #fff;
+    background-color: #555;
 }
 
-.menu__item.active {
-    background-color: black;
-    color: white;
+@media (max-width: 480px) {
+    .toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    button {
+        width: 48.63%;
+        margin-bottom: 8px;
+    }
 }
 
-.menu__item:hover {
-
-}
-
-.menu__item-active,
-.menu__item-active:hover {
-
+@media (max-width: 397px) {
+    button { width: 100%; }
 }

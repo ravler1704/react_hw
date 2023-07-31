@@ -1,14 +1,16 @@
-import React, {Component} from 'react';
+import React from 'react';
+import './ProjectList.css';
 
-class ProjectList extends Component {
-    state = {
-        list: this.list,
-    };
-    render() {
-        return <div>
-            <p>list: {this.list}</p>
-        </div>;
-    }
+function ProjectList({ projects }) {
+    let index = 0;
+
+    return (
+        projects.map((item) => (
+            <div className='item' key={index++}>
+                <img src={item.img} alt='' />
+            </div>
+        ))
+    );
 }
 
 export default ProjectList;
