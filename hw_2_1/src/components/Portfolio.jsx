@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Toolbar from "./Toolbar/Toolbar.jsx";
-import ProjectList from "./ProjectList.jsx";
+import ProjectList from "./ProjectList/ProjectList.jsx";
 
 const list = [{
     img: "https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/events-state/filter/img/mon.jpg",
@@ -64,9 +64,10 @@ class Portfolio extends Component {
                         <Toolbar
                             filters={["All", "Websites", "Flayers", "Business Cards"]}
                             selected="Websites"
+                            onSelectFilter={(filter) => {console.log(filter);}}
                         />
                     </div>
-                    <ProjectList/>
+                    <ProjectList list={list}/>
                     <div className="project-list"></div>
                 </div>
             </div>

@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 
 class ProjectList extends Component {
+    state = {
+        list: this.list,
+    };
     render() {
-        return (
-            <div>
-                <p>project list</p>
-            </div>
-        );
+        return <div>
+            <p>list: {this.list}</p>
+        </div>;
     }
 }
 

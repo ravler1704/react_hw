@@ -6,8 +6,10 @@ class Toolbar extends Component {
         filters: this.props.filters,
         selected: this.props.selected
     };
-    handleClick() {
-        this.setState({ selected: this.state.selected })
+
+    handleClick = (e, member) => {
+        debugger;
+        this.setState({ selected: member })
     }
     render() {
         return <div className="menu">
@@ -15,7 +17,9 @@ class Toolbar extends Component {
                 <div
                     key={member}
                     className={`${member === this.state.selected ? 'menu__item active' : 'menu__item'}`}
-                    onClick={this.handleClick}
+                    onClick={(e) => {
+                        this.handleClick(e, member);
+                    }}
                 >
                     {member}
                 </div>
