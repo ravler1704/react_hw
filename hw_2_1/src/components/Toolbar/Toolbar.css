@@ -1,0 +1,28 @@
+.main {
+    margin: 0 300px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu__item {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.menu__item.active {
+    background-color: black;
+    color: white;
+}
+
+.menu__item:hover {
+
+}
+
+.menu__item-active,
+.menu__item-active:hover {
+
+}
