@@ -1,11 +1,17 @@
 .workout-list{
-    margin: 100px 0;
     border: 3px solid black;
     width: 750px;
     height: auto;
     border-radius: 20px;
     padding: 20px;
     font-size: 23px;
+}
+
+.workout-list-row-header {
+    display: flex;
+    justify-content: space-around;
+    font-size: 23px;
+    margin: 40px 0;
 }
 
 .wrapper{
@@ -15,6 +21,7 @@
 .title{
     display: flex;
     font-size: 23px;
+    margin-bottom: 10px;
 }
 
 .title-date{

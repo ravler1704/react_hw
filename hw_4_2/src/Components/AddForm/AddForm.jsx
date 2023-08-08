@@ -30,8 +30,8 @@ export default function AddForm({ addWorkout, updateDistance }) {
     return (
         <form onSubmit={handleSubmit}>
             <div className="title">
-                <span className="title-date">Дата (ДД.ММ.ГГ.)</span>
-                <span className="title-distance">Количество км</span>
+                <span className="title-date">Дата (ДД.ММ.ГГ)</span>
+                <span className="title-distance">Пройдено км</span>
             </div>
             <input
                 type="text"
