@@ -1,3 +1,5 @@
+[https://github.com/netology-code/ra16-homeworks/blob/ra-51/events-state/filter/README.md](https://github.com/netology-code/ra16-homeworks/tree/ra-51/events-state/filter)
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
