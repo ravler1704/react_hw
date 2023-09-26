@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { categoriesListSelector } from "../../selectors";
-import { setCategoryId, fetchProducts } from "../../actions/actionCreators";
+import {setCategoryId, fetchProducts, fetchCategories} from "../../actions/actionCreators";
 import Loader from "../Loader";
 import Message from "../Message";
 
@@ -21,7 +21,7 @@ const Categories = () => {
   }
 
   if (error) {
-    return <Message type="error" message={error} />
+    return <Message type="error" message={error} callback={fetchCategories} />
   }
 
   return (

@@ -2,6 +2,10 @@ import React from "react";
 import Loader from "./Loader";
 import Message from "./Message";
 import ProductTable from "./ProductTable";
+import {
+    fetchProduct,
+} from "../actions/actionCreators.js";
+import {useNavigate} from "react-router-dom";
 
 const Product = ({
     loading,
@@ -14,13 +18,15 @@ const Product = ({
     changeQuantity,
     selectedQuantity,
     addToCart,
+    id
 }) => {
+    const navigate = useNavigate()
     if (loading) {
         return <Loader loading />;
     }
 
     if (error) {
-        return <Message type="error" message={error} />;
+        return <Message type="error" message={error} callback={fetchProduct} productId={id} navigate={navigate} />;
     }
 
     if (!isProduct) {

@@ -23,7 +23,7 @@ export default function bestsellersListReducer(state = initialState, action) {
             return {
                 ...state,
                 loading: false,
-                error: "Ошибка загрузки",
+                error: "Ошибка загрузки хитов продаж",
             };
         case FETCH_BESTSELLERS_SUCCESS:
             const { items } = action.payload;

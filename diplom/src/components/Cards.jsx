@@ -2,6 +2,12 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import Loader from "./Loader";
 import Message from "./Message";
+import {
+  fetchBestsellers,
+  fetchProductsAndCategories,
+} from "../actions/actionCreators.js";
+
+
 
 const Cards = ({
     items, isCatalog, loading, error,
@@ -35,7 +41,7 @@ const Cards = ({
                     ))
                 }
             </div>
-            <Message type="error" message={error} />
+            <Message type="error" message={error} callback={isCatalog ? fetchProductsAndCategories : fetchBestsellers} />
             <Loader loading={loading} />
         </div>
     )

@@ -76,6 +76,7 @@ const ProductView = () => {
             selectedQuantity={selectedQuantity}
             setSelectedQuantity={setSelectedQuantity}
             addToCart={addToCart}
+            id={Number(id)}
         />
     );
 }

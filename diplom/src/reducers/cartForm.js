@@ -52,7 +52,7 @@ export default function searchReducer(state = initialState, action) {
                 ...state,
                 loading: false,
                 success: false,
-                error: "Ошибка отправки",
+                error: "Ошибка отправки, попробуйте отправить форму повторно",
             };
         default:
             return state;

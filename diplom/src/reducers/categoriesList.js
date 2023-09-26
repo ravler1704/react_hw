@@ -25,7 +25,7 @@ export default function categoriesListReducer(state = initialState, action) {
             return {
                 ...state,
                 loading: false,
-                error: "Ошибка загрузки, перезагрузите страницу",
+                error: "Ошибка загрузки категорий",
             };
         case FETCH_CATEGORIES_SUCCESS:
             const { items } = action.payload;

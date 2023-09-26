@@ -28,7 +28,7 @@ export default function productsListReducer(state = initialState, action) {
             return {
                 ...state,
                 loading: false,
-                error: "Ошибка загрузки",
+                error: "Ошибка загрузки товаров",
             };
         case FETCH_PRODUCTS_SUCCESS_FIRST:
             const { items } = action.payload;

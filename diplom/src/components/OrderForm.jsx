@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { changeFormInput, sendOrder } from "../actions/actionCreators";
+import {changeFormInput, sendOrder} from "../actions/actionCreators";
 import { cartFormSelector, cartItemsSelector } from "../selectors";
 import Loader from "./Loader";
 import Message from "./Message";

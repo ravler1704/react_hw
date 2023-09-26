@@ -167,6 +167,11 @@ section {
   min-height: 300px;
 }
 
+.card-img-top {
+  height: 250px;
+  object-fit: contain;
+}
+
 /* Catalog */
 .catalog {
   min-height: 600px;

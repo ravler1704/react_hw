@@ -261,6 +261,11 @@ export const searchProducts = (query) => async (dispatch) => {
     dispatch(fetchProducts(0));
 };
 
+export const fetchProductsAndCategories = () => async (dispatch) => {
+    dispatch(fetchCategories());
+    dispatch(fetchProducts(0));
+};
+
 export const fetchBestsellers = () => (dispatch) => {
     dispatch(fetchBestsellersRequest());
 
