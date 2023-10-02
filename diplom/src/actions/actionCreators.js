@@ -266,6 +266,10 @@ export const fetchProductsAndCategories = () => async (dispatch) => {
     dispatch(fetchProducts(0));
 };
 
+export const fetchProductsOnly = () => async (dispatch) => {
+    dispatch(fetchProducts(0));
+};
+
 export const fetchBestsellers = () => (dispatch) => {
     dispatch(fetchBestsellersRequest());
 

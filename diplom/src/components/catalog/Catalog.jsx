@@ -13,12 +13,14 @@ const Catalog = () => {
     const location = useLocation();
     const dispatch = useDispatch();
     const { items, loading: cardsLoading, error } = useSelector(productsListSelector);
-    const { loading: categoriesLoading } = useSelector(categoriesListSelector);
+    const { items: categories, loading: categoriesLoading } = useSelector(categoriesListSelector);
     const isCatalog = location.pathname === '/catalog';
 
     useEffect(() => {
         dispatch(fetchCategories());
-        dispatch(fetchProducts(0));
+        if (!cardsLoading) {
+            dispatch(fetchProducts(0));
+        }
 
         return () => {
             if (isCatalog) {
@@ -39,7 +41,7 @@ const Catalog = () => {
                 && (
                     <div>
                         <Categories />
-                        <Cards loading={cardsLoading} error={error} items={items} isCatalog />
+                        <Cards loading={cardsLoading} error={error} items={items} isCatalog categories={categories}/>
                         <LoadMoreBtn items={items} />
                     </div>
                 )

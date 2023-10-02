@@ -8,7 +8,7 @@ const LoadMoreBtn = ({ items }) => {
   const { loading } = useSelector(productsListSelector);
   const [countItems, setCountItems] = useState('');
   const [prevCount, setPrevCount] = useState(1);
-  const showBtn = !loading && (items.length % 6 === 0) && (countItems !== prevCount);
+  const showBtn = !loading && (items.length % 6 === 0) && (countItems !== prevCount) && countItems;
 
   useEffect(() => {
     setCountItems(items.length);

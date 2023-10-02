@@ -4,13 +4,13 @@ import Loader from "./Loader";
 import Message from "./Message";
 import {
   fetchBestsellers,
-  fetchProductsAndCategories,
+  fetchProductsAndCategories, fetchProductsOnly,
 } from "../actions/actionCreators.js";
 
 
 
 const Cards = ({
-    items, isCatalog, loading, error,
+    items, isCatalog, loading, error, categories
 }) => {
     let location = useLocation();
     let currentLink = location.pathname === '/catalog' ? '/catalog' : '/catalog';
@@ -41,7 +41,10 @@ const Cards = ({
                     ))
                 }
             </div>
-            <Message type="error" message={error} callback={isCatalog ? fetchProductsAndCategories : fetchBestsellers} />
+            {categories && categories.length > 0
+              ? <Message type="error" message={error} callback={isCatalog ? fetchProductsOnly : fetchBestsellers} />
+              : <Message type="error" message={error} callback={isCatalog ? fetchProductsAndCategories : fetchBestsellers} />
+            }
             <Loader loading={loading} />
         </div>
     )

@@ -167,6 +167,17 @@ section {
   min-height: 300px;
 }
 
+.card {
+  height: 450px;
+}
+
+.card-body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .card-img-top {
   height: 250px;
   object-fit: contain;
